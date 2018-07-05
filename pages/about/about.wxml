@@ -1,0 +1,12 @@
+<view class='about'>
+  <view class='info'>
+    <image src='/img/logo.png'></image>
+    <view class='name'>Go Weather</view>
+  </view>
+  <view class='attention item'>
+    <view class='title'>关于我们</view>
+    <view class='i'>
+      <view class='text'>Go Weather 是一款超级好用的天气小程序</view>
+    </view>
+  </view>
+</view>
