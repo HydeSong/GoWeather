@@ -1,4 +1,4 @@
-# QuietWeather
+# GoWeather
 一款天气应用微信小程序
 
 ## 数据来源
