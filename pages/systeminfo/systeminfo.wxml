@@ -7,4 +7,5 @@
     <view class='key'>{{item.name}}</view>
     <view class='value'>{{systeminfoObj[item.key]}}</view>
   </view>
+  <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">微信登录</button>
 </view>

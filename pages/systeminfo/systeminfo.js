@@ -1,4 +1,39 @@
 Page({
+  onGotUserInfo(e) {
+    // e.detail 跟 wx.getUserInfo()获取的用户信息是一样的
+    // const { encryptedData, iv, rawData, signature, userInfo } = e.detail;
+    // console.log(encryptedData);
+    // console.log(iv);
+    // console.log(rawData);
+    // console.log(signature);
+    // console.log(userInfo);
+
+    const { encryptedData, iv } = e.detail;
+    const data = { encryptedData, iv };
+
+    wx.login({
+      timeout: 3000, // timeout 是超时时间，单位是 ms
+      success: res => { // wx.login 接口调成功后会执行 success 回调
+        // res.code 就是登录的凭证, 需要发送给服务端
+        const code = res.code;
+        console.log(code)
+        console.log(encryptedData)
+        console.log(iv)
+
+        wx.request({
+          url: `http://127.0.0.1/users/wxLogin`, // 我们的服务端地址
+          method: 'POST',
+          data: {
+            code, encryptedData, iv
+          },
+          success: res => {
+            // res.data 为服务端正确登录后签发的 JWT
+            wx.setStorageSync('auth', res.data);
+          }
+        })
+      }
+    })
+  },
   data: {
     systeminfoObj: {},
     systeminfoArr: [

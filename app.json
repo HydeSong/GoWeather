@@ -4,12 +4,14 @@
     "pages/about/about",
     "pages/citychoose/citychoose",
     "pages/setting/setting",
-    "pages/systeminfo/systeminfo"
+    "pages/systeminfo/systeminfo",
+    "pages/auth/auth"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#00a9fa",
     "navigationBarTitleText": "Go Weather",
-    "navigationBarTextStyle": "light"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
 }

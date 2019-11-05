@@ -1,8 +1,8 @@
 Page({
   data: {
-    github: 'https://github.com/myvin',
-    email: '851399101@qq.com',
-    qq: '851399101',
+    github: 'https://github.com/hydesong',
+    email: '854110547@qq.com',
+    qq: '854110547',
   },
   copy(e) {
     let dataset = (e.target || {}).dataset || {}
